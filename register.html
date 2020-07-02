@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="register.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="box">
+            <img src="logg.png" alt="log" width="50px">
+        </div>
+        <h1>Inscription Client Banque du peuple</h1>    
+            <div class="container">
+                <form>
+                    <div class="flex">
+                        <fieldset class="typeCompte" id="existance_client">
+                            <legend>Gestion Compte</legend>
+                            <div class="flex" id="gesCompte">
+                                <div class="block">
+                                    <label for="gescompte">Nouveau Compte
+                                        <input type="radio"  id="nouvCompte" name="existClient" onclick="exist()" value="nouveau">
+                                    </label>
+                                </div>
+                                <div class="flex">
+                                    <label for="gesAccount">Compte Existant
+                                        <input type="radio" id="compteExistant" name="existClient"  onclick="exist()" value="existant">
+                                        <div class="recherche"><br>
+                                            <input type="text" name="search" id="search_id" placeholder="Veuillez rechercher votre ID!">
+                                            <button>
+                                                <img class="rech" src="search.png" alt="search" width="20px" id="bouton">
+                                            </button>
+                                        </div>
+                                    </label>   
+                                    
+                                </div>     
+                            </div>    
+                        </fieldset>
+                    </div> 
+
+                    <div class="flex">
+                        <fieldset class="typeClient" id="type_client">
+                            <legend>Type de Client</legend>
+                            <div class="flex" id="physique">
+                                <label for="gescompte">Client physique
+                                    <input type="radio"  value="clientPhysique" id="physiqueClient" onclick="physique()" name="typeClient">
+                                </label>
+                                <label for="moral">Client Moral
+                                    <input type="radio" value="ClientMoral" id="clientEntreprise" name="typeClient" onclick="physique()">
+                                </label>    
+                            </div>
+                        </fieldset>
+                    </div>  
+
+                    <div class="flex">
+                        <fieldset class="typeAccount" id="type_compte">
+                            <legend>Type Compte</legend>
+                                <label for="simple">Simple et Xeweel</label>
+                                <input type="radio" name="compte" id="simple" onclick="compte_simple()">
+
+                                <label for="simple">Courant</label>
+                                <input type="radio" name="compte" id="courant" onclick="compte_simple()">
+                    
+
+                                <label for="simple">bloque</label>
+                                <input type="radio" name="compte" id="bloque" onclick="compte_simple()">
+                        </fieldset>
+                    </div>
+
+                    <div class="flex1">
+                        <div class="form2">
+                            <fieldset class="account-courant" id="compte_courant">
+                                <legend>Compte Courant</legend>
+
+                                <label for="raison-social">Raison Sociale</label>
+                                <input type="text" placeholder="raison social" id="raison_social"><br>
+
+                                <label for="salaire">Salaire</label>
+                                <input type="text" placeholder="salaire" id="salaire"><br>
+        
+                                <label for="emploName">Nom Employeur</label>
+                                <input type="text" placeholder="Nom employeur" id="employeur"><br>
+
+                                <label for="adresse">Adresse</label>
+                                <input type="text" placeholder="adresse" id="adresses"><br>
+
+                                <p>Agios: A retirer tous les trois mois</p>
+                            </fieldset>
+                        </div>
+
+                        <div class="form">
+                            <fieldset class="clients" id="newCustomer">
+                                <legend>Nouveau client(Salarié)</legend>
+                                <label for="username">Prénom
+                                    <input type="text" placeholder="prénom">
+                                </label><br>
+
+                                <label for="name">Nom
+                                    <input type="text" placeholder="Nom">
+                                </label><br>
+
+                                <label for="numéroCompte">Numéro de compte
+                                    <input type="text" placeholder="Numéro compte">
+                                </label><br>
+
+                                <label for="numAgence">Numéro Agence
+                                <input type="text" placeholder="Numéro agence">
+                                </label><br>
+
+                                <label for="numACni">Numéro CNI
+                                    <input type="text" placeholder="Numéro d'identification">
+                                </label><br>
+
+                                <label for="numTel">Téléphone
+                                    <input type="number" placeholder="numéro téléĥone">
+                                </label><br>
+
+                                <label for="mail">Adresse mail
+                                    <input type="mail" placeholder="adresse@gi.com">
+                                </label><br>
+
+                                <label for="salaire">Salaire(optionnel)
+                                    <input type="text" placeholder="salaire">
+                                </label><br>
+
+                                <label for="profession">profession (optionnel)
+                                    <input type="text" placeholder="prénom">
+                                </label><br>
+
+                                <label for="adresse">adresse de résidence
+                                    <input type="text" placeholder="résidence">
+                                </label><br>
+                            </fieldset> 
+                        </div>
+
+                        <div class="form4">
+                            <fieldset class="clients" id="compteSimple">
+                                <legend>Nouveau client(Non-salarié)</legend>
+                                <label for="username">Prénom
+                                    <input type="text" placeholder="prénom" id="username">
+                                </label><br>
+
+                                <label for="name">Nom
+                                    <input type="text" placeholder="Nom" id="name">
+                                </label><br>
+
+                                <label for="numéroCompte">Numéro de compte
+                                    <input type="text" placeholder="Numéro compte" id="numcompte">
+                                </label><br>
+
+                                <label for="numAgence">Numéro Agence
+                                <input type="number" placeholder="Numéro agence" id="numagence">
+                                </label><br>
+
+                                <label for="numACni">Numéro CNI
+                                    <input type="text" placeholder="Numéro d'identification" id="numcni">
+                                </label><br>
+
+                                <label for="numTel">Téléphone
+                                    <input type="number" placeholder="numéro téléĥone" id="tel">
+                                </label><br>
+
+                                <label for="mail">Adresse mail
+                                    <input type="mail" placeholder="adresse@gi.com" id="mail">
+                                </label><br>
+
+                                <label for="adresse">adresse de résidence
+                                    <input type="text" placeholder="résidence" id="residence">
+                                </label><br>
+                            </fieldset> 
+                        </div>
+                                   
+                                        
+                        <div class="form1">
+                            <fieldset class="client1" id="clientMoral">
+                                <legend>Nom client Entreprise</legend>
+                                <label for="entreprise">Nom Entreprise
+                                    <input type="text" placeholder="Nom Entreprise">
+                                </label><br>
+
+                                <label for="tel">Téléphone
+                                    <input type="text" placeholder="Téléphone">
+                                </label><br>
+
+                                <label for="email">E-mail
+                                    <input type="mail" placeholder="E-mail">
+                                </label><br>
+
+                                <label for="nom-utilisateur">Nom Utilisateur
+                                    <input type="text" placeholder="Nom utilisateur">
+                                </label><br>
+
+                                <label for="budget">Budget Entreprise
+                                        <input type="text"placeholder="Budget Entreprise">
+                                </label><br>
+
+                                <label for="local">Localité
+                                    <input type="text"placeholder="Localité">
+                                </label><br>
+                            </fieldset>
+                        </div>
+
+                        <div class="form3">
+                            <fieldset class="bloc" id="compteBloque">
+                                <legend>Compte bloqué</legend>
+                                <p>frais d'ouverture obligatoire : exemple: 25000fcfa  rémunéré annuellement: exemple: 10000fcfa</p>
+                                <label for="dateOUV">Date Ouverture</label>
+                                <input type="date" placeholder="Date d'ouverture" id="dateouv"><br><br>
+                                <label for="dateFerme">Date Fermeture</label>
+                                <input type="date" placeholder="Date d'ouverture" id="dateferme">
+                            </fieldset>
+                        </div> 
+                        <input class="submit-button" type="submit" name="sub" id="validation" value="Valider">
+                    </form>
+                </div>
+                
+        <script src="register.js"></script>
+    </body>
+</html>
